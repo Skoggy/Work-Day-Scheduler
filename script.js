@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-
+    console.log({} == {})
 
 
     //Sets current year, month and day of the week.
@@ -102,23 +102,23 @@ $(document).ready(function () {
 
                 // if it is the current time, it sets the color of the text area to red
                 if (currentHour === tAHour) {
-                setColor(textArea, '#ff6961')
+                    setColor(textArea, '#ff6961')
                     //this determines if its the future, and sets it to green
                 }
                 else if ((currentHour < tAHour) && (currentHour > tAHour - 12)) {
-                setColor(textArea, '#77dd77')
+                    setColor(textArea, '#77dd77')
                     //determines if its the past and sets it to grey.
                 }
                 else if ((currentHour > tAHour) && (currentHour < tAHour + 12)) {
-                 setColor(textArea, '#d3d3d3')
+                    setColor(textArea, '#d3d3d3')
                 }
                 //This is the function that changes the color.
             }
         }
-       function setColor(element, color) {
+        function setColor(element, color) {
             element.style.backgroundColor = color;
         }
-   }
+    }
 
     )
 }
